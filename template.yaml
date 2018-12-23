@@ -34,8 +34,8 @@ Resources:
       FunctionName: !Sub ${AWS::StackName}-function68A3416A
       Description: !Sub
         - Stack ${StackTagName} Environment ${EnvironmentTagName} Function ${ResourceName}
-        - ResourceName: function68A3416A
-      CodeUri: src/function68A3416A
+        - ResourceName: myFunction
+      CodeUri: src/myFunction
       Handler: index.handler
       Runtime: nodejs8.10
       MemorySize: 3008
@@ -56,6 +56,8 @@ Resources:
             Path: /
             Method: ANY
             RestApiId: !Ref api6B7096BB
+    Metadata:
+      StackeryName: myFunction
 Parameters:
   StackTagName:
     Type: String
