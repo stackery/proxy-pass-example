@@ -27,7 +27,6 @@ Resources:
                 uri: !Sub arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${function68A3416A.Arn}/invocations
               responses: {}
       EndpointConfiguration: REGIONAL
-      Cors: '''*'''
   function68A3416A:
     Type: AWS::Serverless::Function
     Properties:
